@@ -1,0 +1,288 @@
+/* Universal reset */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    width:100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* General styles */
+body{
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.5rem;
+    min-height: 100vh;
+    background-color: var(--BGCOLOR);
+    color : var(--COLOR);
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+:root{
+    --BGCOLOR : #223843;
+    --COLOR : #eff1f3;
+    --PLCOLOR : #d0c88e;
+    --MISCCOLOR : #edafb8;
+    --BIGFONT : 25rem;
+    --MEDFONT : 10rem;
+    --DRKCOLOR : #4a5759;
+}
+
+header{
+    font-size : 2.5rem;
+    text-align: center;
+}
+
+main{
+    flex-grow: 1;
+    display: flex;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Winner line */
+.winner p{
+    font-size: 3.5rem;
+    font-weight: 600;
+    color : var(--MISCCOLOR);
+    margin-top: 2rem;
+}
+
+/* Game container */
+.game_container{
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 1;
+    gap:5rem;
+    align-items: center;
+}
+
+.choose{
+    display: none;
+    flex-flow:column nowrap;
+}
+
+.choose1, .choose2{
+    background-color: #2a414dd6;
+    padding:2rem 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.choose1{
+    position: absolute;
+    left :2rem;
+    bottom :17rem;
+
+}
+
+.choose2{
+    position: absolute;
+    right:2rem;
+    bottom : 17rem;
+}
+
+.choose_items{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    font-size: var(--MEDFONT);
+}
+
+.choose_items .rock:hover,.choose_items .paper:hover, .choose_items .scissor:hover{
+    transform: scale(1.2);
+    transition: all 0.3s linear;
+}
+
+.choose, .selected {
+    color : var(--PLCOLOR);
+    text-align: center;
+}
+
+.selected{
+    display: none;
+}
+
+.selected_text1{
+    position:absolute;
+    left : 12.3rem;
+    bottom : 17rem;
+}
+
+.selected_text2{
+    position:absolute;
+    right : 12.3rem;
+    bottom : 17rem;
+}
+
+.selected_item{
+    font-size: var(--BIGFONT);
+    display: none;
+}
+
+/* animation */
+.animation{
+    display: none;
+    flex-flow:row nowrap;
+    font-size: var(--BIGFONT);
+    position:absolute;
+    gap:7rem;
+    top:8rem;
+}
+
+.asset1{
+    transform: rotateY(180deg) rotateZ(-80deg);
+    animation: asset1_ani 2s linear forwards;
+}
+
+.asset2{
+    transform: rotateZ(-80deg);
+    animation: asset2_ani 2s linear forwards;
+}
+
+@keyframes asset1_ani{
+    0%{
+        transform: translateX(0) translateY(0) rotateZ(80deg) rotateY(180deg);
+    }
+    7.142%{
+        transform: translateX(-2rem) translateY(-1.5rem) rotateZ(75deg) rotateY(180deg);
+    }
+    14.284%{
+        transform: translateX(0) translateY(0) rotateZ(80deg) rotateY(180deg);
+    }
+    21.426%{
+        transform: translateX(-2rem) translateY(3rem) rotateZ(90deg) rotateY(180deg);
+    }
+    28.568%{
+        transform: translateX(0) translateY(0) rotateZ(80deg) rotateY(180deg);
+    }
+    35.71%{
+        transform: translateX(-2rem) translateY(-1.5rem) rotateZ(75deg) rotateY(180deg);
+    }
+    42.582%{
+        transform: translateX(0) translateY(0) rotateZ(80deg) rotateY(180deg);
+    }
+    50%{
+        transform: translateX(-2rem) translateY(3rem) rotateZ(90deg) rotateY(180deg);
+    }
+    57.136%{
+        transform: translateX(0) translateY(0) rotateZ(80deg) rotateY(180deg);
+    }
+    64.278%{
+        transform: translateX(-2rem) translateY(-1.5rem) rotateZ(75deg) rotateY(180deg);
+    }
+    71.42%{
+        transform: translateX(0) translateY(0) rotateZ(80deg) rotateY(180deg);
+    }
+    78.562%{
+        transform: translateX(-2rem) translateY(3rem) rotateZ(90deg) rotateY(180deg);
+    }
+    85.704%{
+        transform: translateX(0) translateY(0) rotateZ(80deg) rotateY(180deg);
+    }
+    92.846%{
+        transform: translateX(-2rem) translateY(-1.5rem) rotateZ(75deg) rotateY(180deg);
+    }
+    100%{
+        transform: translateX(0) translateY(0) rotateZ(80deg) rotateY(180deg);
+    }
+}
+
+@keyframes asset2_ani{
+    0%{
+        transform: translateX(0) translateY(0) rotateZ(-80deg);
+    }
+    7.142%{
+        transform: translateX(2rem) translateY(-1.5rem) rotateZ(-75deg);
+    }
+    14.284%{
+        transform: translateX(0) translateY(0) rotateZ(-80deg);
+    }
+    21.426%{
+        transform: translateX(2rem) translateY(3rem) rotateZ(-90deg);
+    }
+    28.568%{
+        transform: translateX(0) translateY(0) rotateZ(-80deg);
+    }
+    35.71%{
+        transform: translateX(2rem) translateY(-1.5rem) rotateZ(-75deg);
+    }
+    42.582%{
+        transform: translateX(0) translateY(0) rotateZ(-80deg);
+    }
+    50%{
+        transform: translateX(2rem) translateY(3rem) rotateZ(-90deg);
+    }
+    57.136%{
+        transform: translateX(0) translateY(0) rotateZ(-80deg);
+    }
+    64.278%{
+        transform: translateX(2rem) translateY(-1.5rem) rotateZ(-75deg);
+    }
+    71.42%{
+        transform: translateX(0) translateY(0) rotateZ(-80deg);
+    }
+    78.562%{
+        transform: translateX(2rem) translateY(3rem) rotateZ(-90deg);
+    }
+    85.704%{
+        transform: translateX(0) translateY(0) rotateZ(-80deg);
+    }
+    92.846%{
+        transform: translateX(2rem) translateY(-1.5rem) rotateZ(-75deg);
+    }
+    100%{
+        transform: translateX(0) translateY(0) rotateZ(-80deg);
+    }
+}
+
+.rock1s, .paper1s, .scissor1s, .rock2s, .scissor2s, .paper2s {
+    position:absolute;
+    top:8rem;
+}
+
+.rock1s, .paper1s, .scissor1s {
+    left:7rem;
+    transform: rotate(0deg 180deg -80deg);
+}
+.rock2s, .paper2s, .scissor2s {
+    right:7rem;
+    transform: rotate(0deg 0deg -80deg);
+}
+
+/* reset button */
+.button{
+    background-color: var(--MISCCOLOR);
+    border:none;
+    font-size : 2rem;
+    padding : 0.5rem;
+    margin:1rem;
+    border-radius: 5px;
+    color : var(--DRKCOLOR);
+    font-weight: 600;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button:hover, .button:focus{
+    background-color: #e4a8b1c0;
+}
+
+.button:active{
+    background-color: #ca969ec0;
+    box-shadow: none;
+}
+
+footer{
+    font-size:smaller;
+    text-align: center;
+}

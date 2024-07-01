@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <header>
+        <h1>Rock-Paper-Scissors</h1>
+    </header>
+    <main>
+        <section class="winner">
+            <p id="winner"></p>
+        </section>
+        <section class="game_container">
+            <section class="player1">
+                <section class="choose1 choose" id="choose1">
+                    <section class="choose_items">
+                        <section class="rock" id="rock1" onclick="chosen_text1('✊')">✊</section>
+                        <section class="paper" id="paper1" onclick="chosen_text1('✋')">✋</section>
+                        <section class="scissor" id="scissor1" onclick="chosen_text1('✌️')">✌️</section>
+                    </section>
+                    <section class="choose_text">
+                        <h2>Player 1 is Choosing</h2>
+                    </section>
+                </section>
+                <section class="selected" id="selected1">
+                    <section class="selected_item" id="selected_item1">
+                        <section class="rock1s" id="rock1s">✊</section>
+                        <section class="paper1s" id="paper1s">✋</section>
+                        <section class="scissor1s" id="scissor1s">✌️</section>
+                    </section>
+                    <section class="selected_text1" id="chosen1">
+                        <h2>Player 1 has Chosen</h2>
+                    </section>
+                </section>
+            </section>
+            <section class="player2">
+                <section class="choose2 choose"  id="choose2">
+                    <section class="choose_items">
+                        <section class="rock" id="rock2" onclick="chosen_text2('✊')">✊</section>
+                        <section class="paper" id="paper2" onclick="chosen_text2('✋')">✋</section>
+                        <section class="scissor" id="scissor2" onclick="chosen_text2('✌️')">✌️</section>
+                    </section>
+                    <section class="choose_text">
+                        <h2>Player 2 is Choosing</h2>
+                    </section>
+                </section>
+                <section class="selected" id="selected2">
+                    <section class="selected_item" id="selected_item2">
+                        <section class="rock2s" id="rock2s">✊</section>
+                        <section class="paper2s" id="paper2s">✋</section>
+                        <section class="scissor2s" id="scissor2s">✌️</section>
+                    </section>
+                    <section class="selected_text2" id="chosen2">
+                        <h2>Player 2 has Chosen</h2>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <section class="animation" id="animation">
+            <section class="asset1">✊</section>
+            <section class="asset2">✊</section>
+        </section>
+        <button id="button" class="button">Reset Game</button>
+    </main>
+    <footer>
+        <p>A game by Hanuman</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
